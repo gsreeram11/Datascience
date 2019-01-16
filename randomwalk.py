@@ -6,8 +6,6 @@ all_walks = []
 
 # Simulate random walk 500 times
 for i in range(500):
-
-    # Code from before
     random_walk = [0]
     for x in range(100):
         step = random_walk[-1]
@@ -27,10 +25,8 @@ for i in range(500):
     # Append random_walk to all_walks
     all_walks.append(random_walk)
 
-# Convert all_walks to Numpy array: np_aw
+# Convert to numpy array
 np_aw = np.array(all_walks)
-
-# Transpose np_aw: np_aw_t
 np_aw_t = np.transpose(np_aw)
 
 # Plot np_aw_t and show
@@ -40,6 +36,6 @@ plt.show()
 # Select last row from np_aw_t: ends
 ends = np_aw_t[-1, :]
 
-# Plot histogram of ends, display plot
+# Plot histogram of ends
 plt.hist(ends)
 plt.show()
